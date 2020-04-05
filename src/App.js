@@ -99,13 +99,19 @@ const App = () => {
     setWinner(checkForWinner());
     setSquares(newSquares);
   }
+  const resetGame = () => {
+    setSquares(generateSquares());
+    setCurrentPlayer('x');
+    setNumSquaresFilled(0);
+    setWinner(null);
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>React Tic Tac Toe</h1>
         <h2>{winner === null ? `Current Player ${ currentPlayer }` : `Winner is ${ winner }`}</h2>
-        <button onClick={() => { }}>Reset Game</button>
+        <button onClick={resetGame}>Reset Game</button>
       </header>
       <main>
         <Board squares={squares} onClickCallback={updateSquares} />
