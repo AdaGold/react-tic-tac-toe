@@ -1,0 +1,46 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@CheezItMan 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+AdaGold
+/
+litter-patrol
+2
+0
+191
+ Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights Settings
+litter-patrol/.github/PULL_REQUEST_TEMPLATE
+@Hamled Hamled CS Fundamentals questions
+1901d30 on Nov 26, 2018
+We found potential security vulnerabilities in your dependencies.
+You can see this message because you have been granted access to security alerts for this repository.
+
+18 lines (16 sloc)  1.45 KB
+  
+# React Tic Tac Toe
+
+Congratulations! You're submitting your assignment!
+
+## Comprehension Questions
+Question | Answer
+--- | ---
+How are events / event handlers and `useState` connected? | 
+What are two ways to do "dynamic styling" with React? When should they be used? | 
+Much like Rails works with the HTTP request->response cycle, React works with the browser's input->output cycle. Describe React's cycle from receiving user input to outputting different page content. | 
+
+
+## CS Fundamentals Questions
+Question | Answer
+--- | ---
+What do you think is the BigO complexity of the method you use to compute a winner? | 
+Consider what happens when React processes a state change from `setState` -- it must re-render all of the components that now have different content because of that change.<br>What kind of data structure are the components in, and what sort of algorithms would be appropriate for React's code to "traverse" those components?<br>Speculate wildly about what the Big-O time complexity of that code might be. | 
+
