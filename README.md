@@ -17,6 +17,8 @@
 
 We will create a Tic Tac Toe game which allows users to interact with the screen to add play the classic game.  If you are unfamilair with Tic Tac Toe, [you can read about it](https://www.thesprucecrafts.com/tic-tac-toe-game-rules-412170).
 
+You can also [play with a working version of the game](https://adagold.github.io/react-tic-tac-toe/) on github pages!
+
 ## Getting Started
 
 We have provided you an initial Application Skeleton generated with create-react-app. The application will have the following components:
