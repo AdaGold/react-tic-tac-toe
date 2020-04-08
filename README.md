@@ -33,8 +33,8 @@ We have already implemented some pieces of this project:
 - `Board.css` a css file to style the game board
 - `App.css` a css file to 
 - `App.js` a starter `App` component
-- `Board.js` a starter `Board component
-- `Square.js` a starter Square component.
+- `Board.js` a starter `Board` component
+- `Square.js` a starter `Square` component.
 
 ## Setup Requirements
 
@@ -69,5 +69,4 @@ For an optional bit of fun try to use [github pages](https://github.com/gitname/
 ## What We Are Looking For
 
 Check out the [feedback template](feedback.md) which lists the items instructors will be looking for as they evaluate your project.
-
 
