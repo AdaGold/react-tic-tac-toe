@@ -5,17 +5,8 @@ import PropTypes from 'prop-types';
 
 
 const generateSquares = (squares, onClickCallback) => {
-  const singleArraySquares = [].concat(...squares);
-  console.log(squares);
-  console.log(singleArraySquares);
-  return singleArraySquares.map((square) => {
-    return <Square
-      value={square.value}
-      id={square.id}
-      onClickCallback={onClickCallback}
-      key={square.id}
-    />
-  });
+  // Complete this for Wave 1
+
 }
 
 const Board = ({ squares, onClickCallback }) => {
