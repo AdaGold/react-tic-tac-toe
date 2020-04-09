@@ -8,23 +8,18 @@ const PLAYER_2 = 'O';
 
 const generateSquares = () => {
   const squares = [];
-  let row = 0;
-  let col = 0;
-  let currentId = 0;
-  console.log(`row = ${ row }`);
 
-  while (row < 3) {
+  let currentId = 0;
+
+  for (let row = 0; row < 3; row += 1) {
     squares.push([]);
-    while (col < 3) {
+    for (let col = 0; col < 3; col += 1) {
       squares[row].push({
         id: currentId,
         value: '',
       });
-      col += 1;
       currentId += 1;
     }
-    row += 1;
-    col = 0;
   }
 
   return squares;
