@@ -44,7 +44,7 @@ We have already implemented some pieces of this project:
 
 ## Wave 1
 
-Update the `Square`, and `Board` components to render the grid of squares.  You will need to complete
+Update the `Board` component to render the grid of squares.  You will need to complete
 
 - `generateSquareComponents` in the `Board` component
 
