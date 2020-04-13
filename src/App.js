@@ -36,19 +36,19 @@ const App = () => {
 
 
   const checkForWinner = () => {
-    // Complete in Wave 2
+    // Complete in Wave 3
 
   }
 
   const resetGame = () => {
-    // Complete in Wave 3
+    // Complete in Wave 4
   }
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>React Tic Tac Toe</h1>
-        <h2>The winner is ... -- Fill in for wave 2 </h2>
+        <h2>The winner is ... -- Fill in for wave 3 </h2>
         <button>Reset Game</button>
       </header>
       <main>
@@ -57,7 +57,5 @@ const App = () => {
     </div>
   );
 }
-
-
 
 export default App;
