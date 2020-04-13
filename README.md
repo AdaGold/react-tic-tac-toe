@@ -44,9 +44,7 @@ We have already implemented some pieces of this project:
 
 ## Wave 1
 
-Update the `Board` component to render the grid of squares.  You will need to complete
-
-- `generateSquareComponents` in the `Board` component
+Update the `Board` component to render the grid of squares.  You will need to complete the  `generateSquareComponents` function in the `Board` component.
 
 `App` should pass to `Board` a 2D array of JavaScript objects and Board should use that to render an array of `Square` components.
 
