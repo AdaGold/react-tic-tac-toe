@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@CheezItMan 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-AdaGold
-/
-litter-patrol
-2
-0
-191
- Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights Settings
-litter-patrol/.github/PULL_REQUEST_TEMPLATE
-@Hamled Hamled CS Fundamentals questions
-1901d30 on Nov 26, 2018
-We found potential security vulnerabilities in your dependencies.
-You can see this message because you have been granted access to security alerts for this repository.
-
-18 lines (16 sloc)  1.45 KB
-  
 # React Tic Tac Toe
 
 Congratulations! You're submitting your assignment!
