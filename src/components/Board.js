@@ -10,7 +10,6 @@ const generateSquares = (squares, onClickCallback) => {
 }
 
 const Board = ({ squares, onClickCallback }) => {
-
   const squareList = generateSquares(squares, onClickCallback);
   console.log(squareList);
   return <div className="grid" >
