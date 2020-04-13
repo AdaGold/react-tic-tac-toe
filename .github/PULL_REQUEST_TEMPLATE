@@ -1,0 +1,35 @@
+# React Tic Tac Toe
+
+Congratulations! You're submitting your assignment!
+
+## Comprehension Questions
+Question | Answer
+--- | ---
+How are events / event handlers and `useState` connected? | 
+What are two ways to do "dynamic styling" with React? When should they be used? | 
+Much like Rails works with the HTTP request->response cycle, React works with the browser's input->output cycle. Describe React's cycle from receiving user input to outputting different page content. | 
+
+
+## CS Fundamentals Questions
+Question | Answer
+--- | ---
+What do you think is the BigO complexity of the method you use to compute a winner? | 
+Consider what happens when React processes a state change from `setState` -- it must re-render all of the components that now have different content because of that change.<br>What kind of data structure are the components in, and what sort of algorithms would be appropriate for React's code to "traverse" those components?<br>Speculate wildly about what the Big-O time complexity of that code might be. | 
+
+# React Tic Tac Toe
+
+Congratulations! You're submitting your assignment!
+
+## Comprehension Questions
+Question | Answer
+--- | ---
+How are events / event handlers and `useState` connected? | 
+What are two ways to do "dynamic styling" with React? When should they be used? | 
+Much like Rails works with the HTTP request->response cycle, React works with the browser's input->output cycle. Describe React's cycle from receiving user input to outputting different page content. | 
+
+
+## CS Fundamentals Questions
+Question | Answer
+--- | ---
+What do you think is the BigO complexity of the method you use to compute a winner? | 
+Consider what happens when React processes a state change from `setState` -- it must re-render all of the components that now have different content because of that change.<br>What kind of data structure are the components in, and what sort of algorithms would be appropriate for React's code to "traverse" those components?<br>Speculate wildly about what the Big-O time complexity of that code might be. | 

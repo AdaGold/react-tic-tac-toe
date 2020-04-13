@@ -1,68 +1,85 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Tic Tac Toe
 
-## Available Scripts
+## At A Glance
 
-In the project directory, you can run:
+- Individual [Stage 2 project](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/classroom/rule-of-three.md#stage-2)
+- Due before class on DATE HERE
+- Due EOD Friday at 6pm on DATE HERE
 
-### `yarn start`
+## Learning Goals
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Build React components which recieve data through props
+- Build container components which recieve data through props
+- Build a react component using state
+- Pass callback functions to child components and use them to update state
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Objective
 
-### `yarn test`
+We will create a Tic Tac Toe game which allows users to interact with the screen to add play the classic game.  If you are unfamilair with Tic Tac Toe, [you can read about it](https://www.thesprucecrafts.com/tic-tac-toe-game-rules-412170).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can also [play with a working version of the game](https://adagold.github.io/react-tic-tac-toe/) on github pages!
 
-### `yarn build`
+## Getting Started
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We have provided you an initial Application Skeleton generated with create-react-app. The application will have the following components:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- `Square` - This component represents one square in a tic-tac-toe board.  It will take in props representing the value to show on the board (`x`, `o`, or `''`), an `id`, and a callback function called `onClickCallback`.
+- `Board` - This component will take a callback function, `onClickCallback` and a list of 2D array of JavaScript objects with ids, and values and will render `Square` components each with ids, values and the callback function passed in as props.
+- `App` - This component is the traditional outer component of the React App. The App component will manage the state for the application and track the status for the game including the winner.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What's Already Here
 
-### `yarn eject`
+We have already implemented some pieces of this project:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `Square.css` a css file for styling each square of the game.
+- `Board.css` a css file to style the game board
+- `App.css` a css file to 
+- `App.js` a starter `App` component
+- `Board.js` a starter `Board` component
+- `Square.js` a starter `Square` component.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Setup Requirements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Fork and clone this repo
+1. Install this project's dependencies with `$ npm install`
+1. Start the local development server that runs our React project with `$ npm start`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Wave 1
 
-## Learn More
+Update the `Board` component to render the grid of squares.  You will need to complete the  `generateSquareComponents` function in the `Board` component.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`App` should pass to `Board` a 2D array of JavaScript objects and Board should use that to render an array of `Square` components.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Each `Square` component should take 2 props at this stage.
 
-### Code Splitting
+- `id` the Id of the square
+- `value` the value being displayed in the square
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+We have provided you a function `generateSquares` in `App.js` which generates a 2D array of JavaScript objects with Ids and values (blank strings).  These should be used to provide data to `Board` and `Square` via props.
 
-### Analyzing the Bundle Size
+## Wave 2
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+For Wave 2 you should add the functionality to change the value of a square when the user clicks on it.
 
-### Making a Progressive Web App
+To do so you will need to pass a callback function from `App` to `Board` and on to each square.  
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+You will need to write `onClickCallback` a callback function to call when the `Square` is clicked on and pass it through `Board` to each `Square` component.
 
-### Advanced Configuration
+When the user clicks first clicks on a square it should set the square's value to the proper `x` or `o` depending on the current player's turn.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Wave 3
 
-### Deployment
+For wave 3, you will add the game logic to detect if a player has one or if there is a tie (all squares filled and with no winner).  To do this you will complete the `checkForWinner` method and display the winner in the `header` section.  The game should also cease responding to clicks on the board if the game has a winner.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Wave 4
 
-### `yarn build` fails to minify
+For wave 4 you will add a button to the `App` component to reset the game and clear all the game squares.  
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Optional - Deploy on the web
+
+For an optional bit of fun try to use [github pages](https://github.com/gitname/react-gh-pages) to deploy your game on the web!
+
+## What We Are Looking For
+
+Check out the [feedback template](feedback.md) which lists the items instructors will be looking for as they evaluate your project.
+
