@@ -24,7 +24,9 @@ You can also [play with a working version of the game](https://adagold.github.io
 We have provided you an initial Application Skeleton generated with create-react-app. The application will have the following components:
 
 `Square` - This component represents one square in a tic-tac-toe board.  It will take in props representing the value to show on the board (`x`, `o`, or `''`), an `id`, and a callback function called `onClickCallback`.
+
 `Board` - This component will take a callback function, `onClickCallback` and a list of 2D array of JavaScript objects with ids, and values and will render `Square` components each with ids, values and the callback function passed in as props.
+
 `App` - This component is the traditional outer component of the React App. The App component will manage the state for the application and track the status for the game including the winner.
 
 ## What's Already Here
