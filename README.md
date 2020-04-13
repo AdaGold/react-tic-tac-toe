@@ -54,6 +54,8 @@ Each `Square` component should take 3 props.
 
 When the user clicks first clicks on a square it should set the square's value to the proper `x` or `o` depending on the current player's turn.
 
+We have provided you a function `generateSquares` which generates a 2D array of JavaScript objects with Ids and values (blank strings).  These should be used to provide data to `Board` and `Square` via props.
+
 ## Wave 2
 
 For wave 2, you will add the game logic to detect if a player has one or if there is a tie (all squares filled and with no winner).  To do this you will complete the `checkForWinner` method and display the winner in the `header` section.  The game should also cease responding to clicks on the board if the game has a winner.
