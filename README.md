@@ -44,7 +44,9 @@ We have already implemented some pieces of this project:
 
 ## Wave 1
 
-Update the `Square`, `Board`, and `App` components to render the grid of squares.  
+Update the `Square`, and `Board` components to render the grid of squares.  You will need to complete
+
+- `generateSquareComponents` in the `Board` component
 
 `App` should pass to `Board` a 2D array of JavaScript objects and Board should use that to render an array of `Square` components.
 
@@ -53,7 +55,7 @@ Each `Square` component should take 2 props at this stage.
 - `id` the Id of the square
 - `value` the value being displayed in the square
 
-We have provided you a function `generateSquares` which generates a 2D array of JavaScript objects with Ids and values (blank strings).  These should be used to provide data to `Board` and `Square` via props.
+We have provided you a function `generateSquares` in `App.js` which generates a 2D array of JavaScript objects with Ids and values (blank strings).  These should be used to provide data to `Board` and `Square` via props.
 
 ## Wave 2
 
