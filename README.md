@@ -63,7 +63,7 @@ For Wave 2 you should add the functionality to change the value of a square when
 
 To do so you will need to pass a callback function from `App` to `Board` and on to each square.  
 
-- `onClickCallback` a callback function to call when the `Square` is clicked on.
+You will need to write `onClickCallback` a callback function to call when the `Square` is clicked on and pass it through `Board` to each `Square` component.
 
 When the user clicks first clicks on a square it should set the square's value to the proper `x` or `o` depending on the current player's turn.
 
