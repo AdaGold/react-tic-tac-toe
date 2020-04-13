@@ -4,13 +4,13 @@ import Square from './Square';
 import PropTypes from 'prop-types';
 
 
-const generateSquares = (squares, onClickCallback) => {
+const generateSquareComponents = (squares, onClickCallback) => {
   // Complete this for Wave 1
 
 }
 
 const Board = ({ squares, onClickCallback }) => {
-  const squareList = generateSquares(squares, onClickCallback);
+  const squareList = generateSquareComponents(squares, onClickCallback);
   console.log(squareList);
   return <div className="grid" >
     {squareList}
