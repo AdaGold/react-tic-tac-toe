@@ -27,6 +27,8 @@ We have provided you an initial Application Skeleton generated with create-react
 - `Board` - This component will take a callback function, `onClickCallback` and a list of 2D array of JavaScript objects with ids, and values and will render `Square` components each with ids, values and the callback function passed in as props.
 - `App` - This component is the traditional outer component of the React App. The App component will manage the state for the application and track the status for the game including the winner.
 
+**Remember to run `npm install` or `yarn` to install dependencies into `node_modules`**
+
 ## What's Already Here
 
 We have already implemented some pieces of this project:
