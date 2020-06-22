@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 
 import './Square.css'
 
-const Square = (props) => {
-  console.log(props)
-
+const Square = ({ onClickCallback, value, id }) => {
   return <button
     className="square"
-    onClick={() => props.onClickCallback(props.id)}
+    onClick={() => onClickCallback(id)}
   >
-    {props.value}
+    {value}
   </button>
 }
 
