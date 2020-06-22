@@ -6,8 +6,6 @@ import PropTypes from 'prop-types';
 
 const generateSquares = (squares, onClickCallback) => {
   const singleArraySquares = [].concat(...squares);
-  console.log(squares);
-  console.log(singleArraySquares);
   return singleArraySquares.map((square) => {
     return <Square
       value={square.value}
@@ -21,7 +19,6 @@ const generateSquares = (squares, onClickCallback) => {
 const Board = ({ squares, onClickCallback }) => {
 
   const squareList = generateSquares(squares, onClickCallback);
-  console.log(squareList);
   return <div className="grid" >
     {squareList}
   </div>
