@@ -11,7 +11,6 @@ const generateSquares = () => {
   let row = 0;
   let col = 0;
   let currentId = 0;
-  console.log(`row = ${ row }`);
 
   while (row < 3) {
     squares.push([]);
@@ -53,12 +52,14 @@ const App = () => {
       }
       i += 1;
     }
+    // Check Top-Left to bottom-right diagonal
     if (squares[0][0].value === squares[1][1].value &&
       squares[2][2].value === squares[1][1].value &&
       squares[1][1].value !== '') {
       return squares[0][0].value;
     }
 
+    // Check Top-right to bottom-left diagonal
     if (squares[0][2].value === squares[1][1].value &&
       squares[2][0].value === squares[1][1].value &&
       squares[1][1].value !== '') {
@@ -79,7 +80,6 @@ const App = () => {
       while (col < 3 && !found) {
         let currentSquare = newSquares[row][col];
         if (currentSquare.id === id) {
-          console.log(currentSquare);
           if (currentSquare.value !== '') return;
 
           found = true;
@@ -101,7 +101,7 @@ const App = () => {
   }
   const resetGame = () => {
     setSquares(generateSquares());
-    setCurrentPlayer('x');
+    setCurrentPlayer(PLAYER_1);
     setNumSquaresFilled(0);
     setWinner(null);
   }
@@ -119,7 +119,5 @@ const App = () => {
     </div>
   );
 }
-
-
 
 export default App;
