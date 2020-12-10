@@ -25,10 +25,14 @@ const Board = ({ squares, onClickCallback }) => {
 }
 
 Board.propTypes = {
-  squares: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    value: PropTypes.string.isRequired
-  }))),
+  squares: PropTypes.arrayOf(
+    PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        value: PropTypes.string.isRequired
+      })
+    )
+  ),
   onClickCallback: PropTypes.func.isRequired,
 };
 
