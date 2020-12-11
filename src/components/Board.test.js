@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import Board from './Board';
-import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/react'
+import { render, screen, fireEvent} from '@testing-library/react'
 
 
 describe('Board', () => {
@@ -78,7 +78,7 @@ describe('Board', () => {
     const { container } = render(<Board squares={emptyBoard} onClickCallback={() => { }} />);
 
     // Assert
-    const buttons = container.querySelectorAll('button');
+    const buttons = container.querySelectorAll('.grid button');
     expect(buttons.length).toEqual(9);
   });
 
@@ -87,7 +87,7 @@ describe('Board', () => {
       // Arrange
       const callback = jest.fn();
       const { container } = render(<Board squares={SAMPLE_BOARD} onClickCallback={callback} />);
-      const buttons = container.querySelectorAll('button');
+      const buttons = container.querySelectorAll('.grid button');
 
       // Act
       fireEvent.click(buttons[0]);
@@ -100,7 +100,7 @@ describe('Board', () => {
       // Arrange
       const callback = jest.fn();
       const { container } = render(<Board squares={SAMPLE_BOARD} onClickCallback={callback} />);
-      const buttons = container.querySelectorAll('button');
+      const buttons = container.querySelectorAll('.grid button');
 
       // Act
       fireEvent.click(buttons[buttons.length - 1]);
