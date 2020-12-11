@@ -4,7 +4,7 @@ import Board from './Board';
 import { render, screen, fireEvent} from '@testing-library/react'
 
 
-describe('Board', () => {
+describe('Wave 1: Board', () => {
   // Sample input to the Board component
   const SAMPLE_BOARD = [
     [
