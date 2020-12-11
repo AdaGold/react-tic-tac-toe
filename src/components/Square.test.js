@@ -1,10 +1,10 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import Square from './Square';
-import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 
 
-describe('Square', () => {
+describe('Wave 1: Square', () => {
   test('it renders with X given', () => {
     render(<Square value="X" id={1} onClickCallback={() => { }} />)
     
