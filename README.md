@@ -94,7 +94,10 @@ There are additional tests that you can unskip to verify if a winner is detected
 - If o wins the app has 'Winner is o' appearing on the browser window
 - If x wins the app has 'Winner is x' appearin gon the browser window
 
-**optional** If you feel ambitious see if you can add a test to detect ties!
+**optional** 
+
+-  If you feel ambitious see if you can add a test to detect ties!
+-  You can also create a test to ensure that you can't click on squares after a winner is detected!
 
 ## Optional:  Wave 4
 
