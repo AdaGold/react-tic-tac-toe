@@ -71,7 +71,7 @@ When the user clicks first clicks on a square it should set the square's value t
 
 ## Wave 3
 
-For wave 3, you will add the game logic to detect if a player has one or if there is a tie (all squares filled and with no winner).  To do this you will complete the `checkForWinner` method and display the winner in the `header` section.  The game should also cease responding to clicks on the board if the game has a winner.
+For wave 3, you will add the game logic to detect if a player has won or if there is a tie (all squares filled and with no winner).  To do this you will complete the `checkForWinner` method and display the winner in the `header` section.  The game should also cease responding to clicks on the board if the game has a winner.
 
 ## Wave 4
 
