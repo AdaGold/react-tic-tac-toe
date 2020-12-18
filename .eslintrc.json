@@ -11,7 +11,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["jest", "jsx-a11y"],
+  "plugins": ["jest"],
   "rules": {
     "no-unused-vars": "warn",
     "no-var": "warn",
