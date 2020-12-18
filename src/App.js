@@ -27,6 +27,8 @@ const generateSquares = () => {
 
 const App = () => {
 
+  // This starts state off as a 2D array of JS objects with
+  // empty value and unique ids.
   const [squares, setSquares] = useState(generateSquares());
 
   // Wave 2
@@ -37,6 +39,14 @@ const App = () => {
 
   const checkForWinner = () => {
     // Complete in Wave 3
+    // You will need to:
+    // 1. Go accross each row to see if 
+    //    3 squares in the same row match
+    //    i.e. same value
+    // 2. Go down each column to see if
+    //    3 squares in each column match
+    // 3. Go across each diagonal to see if 
+    //    all three squares have the same value.
 
   }
 
