@@ -1,6 +1,6 @@
 FROM node:15.3.0-alpine3.10
 
-LABEL maintainer="chris.adadev.org"
+LABEL maintainer="chris@adadev.org"
 
 RUN apk add --no-cache bash
 
