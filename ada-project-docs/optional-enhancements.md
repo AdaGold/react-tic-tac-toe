@@ -29,8 +29,10 @@ Deploy this project using GitHub Pages.
 
 We recommend following [the `react-gh-pages` tutorial](https://github.com/gitname/react-gh-pages) for instructions!
 
+## Notify Tie
+
+If the game ends in a tie, adjust the text to indicate that until the game is reset.
+
 ## Customize Name
 
-Include two `<input type="text">` elements that allow users to customize their name.
-
-
+Include two `<input type="text">` elements that allow the two players to customize their name.
