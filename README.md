@@ -1,120 +1,224 @@
-# React Tic Tac Toe
+# React Tic-Tac-Toe
 
-## At A Glance
+## Skills Assessed
 
-- Individual [Stage 2 project](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/classroom/rule-of-three.md#stage-2)
-- Due before class on DATE HERE
-- Due EOD Friday at 6pm on DATE HERE
+- Following directions and reading comprehension
+- Using git as part of the development workflow
+- Demonstrating understanding of the front-end layer, and the relationship between user interaction and the UI
 
-## Learning Goals
+Working with the React JS library:
 
-- Build React components which recieve data through props
-- Build container components which recieve data through props
-- Build a react component using state
-- Pass callback functions to child components and use them to update state
+- Sending data to nested components through `props`
+- Receiving and using `props` within a component
+- Initializing and using state within a component
+- Passing callback functions to child components and use them to update state
+- Practice independent research
+- Practice reading and running tests
 
-## Objective
+## Goal
 
-We will create a Tic Tac Toe game which allows users to interact with the screen to add play the classic game.  If you are unfamilair with Tic Tac Toe, [you can read about it](https://www.thesprucecrafts.com/tic-tac-toe-game-rules-412170).
+Building a game is an exciting coding challenge! Game development requires us to practice skills in:
 
-You can also [play with a working version of the game](https://adagold.github.io/react-tic-tac-toe/) on github pages!
+- Handling user events
+- Updating the UI
+- Updating the state of the game
+
+Our goal is to create a playable version of Tic-Tac-Toe in the browser.
+
+In Tic-Tac-Toe, the game board is a 3x3 grid of squares.
+
+Each square can be marked with an "X," an "O," or it can remain blank. All squares start blank.
+
+Player "X" and Player "O" take turns marking blank squares. Within the 3x3 grid, if the most recent player turn creates a line of three matching marks (horizontal, vertical, or diagonal), then that player wins.
+
+If there are no remaining blank squares and no winner, then the game ends.
+
+We can read more about the rules of Tic-Tac-Toe [in this rules reference](https://www.thesprucecrafts.com/tic-tac-toe-game-rules-412170).
+
+### Demo
+
+[A demo of our project goal is available online](https://adagold.github.io/react-tic-tac-toe/)!
+
+## How to Complete and Submit
+
+Go through the waves one-by-one and build the features of this API.
+
+At submission time, no matter where you are, submit the project via Learn.
+
+## One-Time Project Setup
+
+Follow these directions once at the beginning of your project:
+
+1. Fork the project repo to your own GitHub account
+
+2. Navigate to your projects folder named `projects`
+
+```bash
+$ cd ~/Developer/projects
+```
+
+3. Clone the project into your `projects` folder. This command makes a new folder called `react-tic-tac-toe`, and then puts the project into this new folder:
+
+```bash
+$ git clone ...
+```
+
+Use `ls` to confirm there's a new project folder
+
+4. Move your location into this project folder
+
+```bash
+$ cd react-tic-tac-toe
+```
+
+5. Install the dependencies that are already determined and defined for us.
+
+```bash
+$ yarn install
+```
+
+We can run `yarn install` multiple times safely, but we only need to do this once in the beginning.
+
+The file `package.json` contains details about our project, the scripts available, and the dependencies needed. We can inspect this file when we are curious about the details of our dependencies.
+
+6. Follow the directions in the "Getting Started" section.
+
+7. Follow the directions in the "Project Requirements" section.
+
+## Project Development Workflow
+
+1. To run the server, use this command:
+
+```bash
+$ yarn start
+```
+
+Then visit `localhost:3000` in the browser.
+
+2. Follow the project requirements below.
+
+3. After finishing each feature, capture your work in a git commit with a git message that describes what was implemented or changed.
 
 ## Getting Started
 
-We have provided you an initial Application Skeleton generated with create-react-app. The application will have the following components:
+### Provided Components
 
-- `Square` - This component represents one square in a tic-tac-toe board.  It will take in props representing the value to show on the board (`x`, `o`, or `''`), an `id`, and a callback function called `onClickCallback`.
-- `Board` - This component will take a callback function, `onClickCallback` and a list of 2D array of JavaScript objects with ids, and values and will render `Square` components each with ids, values and the callback function passed in as props.
-- `App` - This component is the traditional outer component of the React App. The App component will manage the state for the application and track the status for the game including the winner.
+The project includes the following components with partial implementations. Before beginning the project, read through the contents of these files once.
 
-**Remember to run `npm install` or `yarn` to install dependencies into `node_modules`**
+Component | Responsibility
+--- | ---
+`App` | Container component. Responsible for holding data about the game state (X's and O's marked and their locations), player information, determining the winner, and rendering the board.
+`Board` | Presentational component. Responsible for rendering a 3x3 grid of squares appropriately.
+`Square` | Presentational component. Responsible for rendering an "X," "O," or nothing (empty string). When it's clicked, it should update the game's state.
 
-## What's Already Here
+### Provided CSS Files
 
-We have already implemented some pieces of this project:
+Each of the CSS files contains classes that are relevant to the appropriate component. These are the styles used in [the project demo](https://adagold.github.io/react-tic-tac-toe/). It's not required to use these classes, and you are allowed to modify them or add styles.
 
-- `Square.css` a css file for styling each square of the game.
-- `Board.css` a css file to style the game board
-- `App.css` a css file to 
-- `App.js` a starter `App` component
-  - `App.test.js` a test file for the `App` component
-- `Board.js` a starter `Board` component
-  - `Board.test.js` a test file for the `Board` component
-- `Square.js` a starter `Square` component.
-  - `Square.test.js` a test file for the `Square` component
+- `components/App.css`
+- `src/components/Board.css`
+- `src/components/Square.css`
 
-## Setup Requirements
+### Provided Test Files
 
-1. Fork and clone this repo
-1. Install this project's dependencies with `$ npm install`
-1. Start the local development server that runs our React project with `$ npm start`
+This project utilizes [the Jest library to test React apps](https://jestjs.io/docs/tutorial-react).
 
-## Wave 1
+Each project wave describes how to use these test files.
 
-Update the `Board` component to render the grid of squares.  You will need to complete the  `generateSquareComponents` function in the `Board` component.
+The included files are the following:
 
-`App` should pass to `Board` a 2D array of JavaScript objects and Board should use that to render an array of `Square` components.
+- `src/App.test.js`
+- `src/components/Board.test.js`
+- `src/components/Square.test.js`
 
-Each `Square` component should take 2 props at this stage.
+## Project Requirements
 
-- `id` the Id of the square
-- `value` the value being displayed in the square
+The three waves can be summarized as follows:
 
-We have provided you a function `generateSquares` in `App.js` which generates a 2D array of JavaScript objects with Ids and values (blank strings).  These should be used to provide data to `Board` and `Square` via props.
+1. Render a board. The board should render a 3x3 grid of squares. The squares should display their value.
+1. Handle click functionality in squares. When a user clicks on a square, the game state must update.
+1. Implement logic that checks the game state if there is a winner, and their name shows up.
+
+## Wave 1: Rendering `Board` and `Squares`
+
+In this wave, fulfill the following requirements.
+
+### `App`
+
+The `App` component should:
+
+- Represent the state of the game board in a 2D array of objects
+  - A helper function named `generateSquares` is already implemented. You can use this to create the initial value of this state.
+- Render a `Board`
+
+The functionality of updating the game state will be covered in wave 2.
+
+### `Board`
+
+The `Board` component should render nine `Square` components, passing the appropriate information from the game state to each `Square`.
+
+To do this, implement the function `generateSquareComponents`. This function should take in a 2D array, and transform it into a 1D array of nine `Square` components. A 1D array of nine `Square` components is better for the `Board` to render!
+
+### `Square`
+
+The `Square` component should display the `value` passed into it.
+
+The `Square` component should also hold an `id`. `Square` doesn't need to render this ID, but it will be used when handling events!
+
+The functionality of handling click events will be covered in wave 2.
+
+### Hints
+
+- Take time to understand the shape of the 2D array created by `generateSquares`. Take notes on it, so you can refer to it throughout the project.
+- Use PropTypes to help determine the required props for each component. In particular, check `Square`.
+
+### Testing Requirement
+
+Follow the [testing directions in this project doc](./ada-project-docs/testing-requirements.md) to read more.
+
+## Wave 2: Add Click Functionality
+
+When a user clicks on a square, it should set the square's value to `"X"` or `"O"`, depending on the current player's turn. This should update the game's state.
+
+To facilitate this feature, fulfill the following requirements:
+
+- In `App`, create a method that updates the game state appropriately
+- The PropTypes of `Board` state that there is a required prop named `onClickCallback`
+  - The value of this prop must be a function
+- The PropTypes of `Square` state that there is a required prop named `onClickCallback`
+  - The value of this prop must be a function
+
+### Hints
+
+- When updating the game state, there needs to be a way to identify the exact `Square` that is being updated. Try utilizing the `Square`'s ID value.
 
 ### Tests
 
-We have test files to verify the correctness of the `Square` and `Board` components.  You can run the tests with:
-  - `npm test src/components/Square.test.js`
-  - `npm test src/components/Board.test.js`
+Follow the [testing directions in this project doc](./ada-project-docs/testing-requirements.md) to read more.
 
-These tests verify that the components show up on the screen when rendered and that the callback function is called when a square is clicked on.
-## Wave 2
+## Wave 3: Check For Winner
 
-For Wave 2 you should add the functionality to change the value of a square when the user clicks on it.
+When a user places an "X" or "O" mark, the game should check if there is a winner. If a mark creates a line of three matching marks (lines can be horizontal, vertical, or diagonal), then:
 
-To do so you will need to pass a callback function from `App` to `Board` and on to each square.  
+- The player who made the mark becomes the winner.
+- The winner's "name" ("X" or "O") appears in the heading.
+- All squares become unclickable.
 
-You will need to write `onClickCallback` a callback function to call when the `Square` is clicked on and pass it through `Board` to each `Square` component.
+The game is a tie if there are no more available squares and no winner has been declared. At this point, all squares are unclickable.
 
-When the user clicks first clicks on a square it should set the square's value to the proper `x` or `o` depending on the current player's turn.
+To accomplish this:
 
-### Tests
+- Implement the function `checkForWinner` in the `App` component
+- Ensure that the winner's name appears
 
-We have a group of tests inside `App.test.js` with a describe titled `Wave 2` which runs tests to verify if Xs and Os appear correctly when the squares are clicked on.
+### Hints
 
-## Wave 3
-
-For wave 3, you will add the game logic to detect if a player has won or if there is a tie (all squares filled and with no winner).  To do this you will complete the `checkForWinner` method and display the winner in the `header` section.  The game should also cease responding to clicks on the board if the game has a winner.
+- Begin implementing `checkForWinner` by creating a "brute force" solution first
 
 ### Tests
 
-There are additional tests that you can unskip to verify if a winner is detected.  The tests check for:
+Follow the [testing directions in this project doc](./ada-project-docs/testing-requirements.md) to read more.
 
-- If o wins the app has 'Winner is o' appearing on the browser window
-- If x wins the app has 'Winner is x' appearin gon the browser window
+## Optional Enhancements
 
-**optional** 
-
--  If you feel ambitious see if you can add a test to detect ties!
--  You can also create a test to ensure that you can't click on squares after a winner is detected!
-
-## Optional:  Wave 4
-
-For wave 4 you will add a button to the `App` component to reset the game and clear all the game squares.  
-
-### Tests
-
-There are additional tests that you can unskip to verify if a the reset button resets the grid.  The tests check for:
-
-- When the reset button (with the text 'Reset Game') is clicked the grid should go back to blank squares.  It selects all the `<button class="square"></button>` elements and verifies that they have no text.
-- Immediately after the reset button is clicked, there shouldn't be a 'Winner is o` or x appearing in the browser window.
-
-## Optional - Deploy on the web
-
-For an optional bit of fun try to use [github pages](https://github.com/gitname/react-gh-pages) to deploy your game on the web!
-
-## What We Are Looking For
-
-Check out the [feedback template](feedback.md) which lists the items instructors will be looking for as they evaluate your project.
-
+Should a project be completed before submission, and there is a desire for more practice, check out our [list of optional enhancements](./ada-project-docs/optional-enhancements.md)!

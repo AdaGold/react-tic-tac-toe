@@ -21,4 +21,4 @@ Square.propTypes = {
   id: PropTypes.number.isRequired,
 };
 
-export default Square
+export default Square;
