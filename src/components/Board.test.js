@@ -3,53 +3,53 @@ import '@testing-library/jest-dom/extend-expect';
 import Board from './Board';
 import { render, screen, fireEvent} from '@testing-library/react'
 
+// Sample input to the Board component
+const SAMPLE_BOARD = [
+  [
+    {
+      value: 'X',
+      id: 0,
+    },
+    {
+      value: 'X',
+      id: 1,
+    },
+    {
+      value: 'O',
+      id: 2,
+    },
+  ],
+  [
+    {
+      value: 'X',
+      id: 3,
+    },
+    {
+      value: 'X',
+      id: 4,
+    },
+    {
+      value: 'O',
+      id: 5,
+    },
+  ],
+  [
+    {
+      value: 'O',
+      id: 6,
+    },
+    {
+      value: 'O',
+      id: 7,
+    },
+    {
+      value: 'X',
+      id: 8,
+    },
+  ],    
+];
 
 describe('Wave 1: Board', () => {
-  // Sample input to the Board component
-  const SAMPLE_BOARD = [
-    [
-      {
-        value: 'X',
-        id: 0,
-      },
-      {
-        value: 'X',
-        id: 1,
-      },
-      {
-        value: 'O',
-        id: 2,
-      },
-    ],
-    [
-      {
-        value: 'X',
-        id: 3,
-      },
-      {
-        value: 'X',
-        id: 4,
-      },
-      {
-        value: 'O',
-        id: 5,
-      },
-    ],
-    [
-      {
-        value: 'O',
-        id: 6,
-      },
-      {
-        value: 'O',
-        id: 7,
-      },
-      {
-        value: 'X',
-        id: 8,
-      },
-    ],    
-  ];
 
   test('that board will render with the proper number of Xs and Os', () => {
     // Act
