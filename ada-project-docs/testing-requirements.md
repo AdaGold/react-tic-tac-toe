@@ -96,7 +96,7 @@ The wave 1 tests verify that:
 
 The wave 2 tests exist in all three test files:
 
-- `src/components/App.test.js`
+- `src/App.test.js`
 - `src/components/Board.test.js`
 - `src/components/Square.test.js`
 
