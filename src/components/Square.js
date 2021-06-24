@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import './Square.css'
 
-const Square = ({ onClickCallback, value, id }) => {
+const Square = ({ value, id }) => {
+  const state = useState({ id, value })
+
+  const updateSquare = () => {
+
+  }
+
   return <button
     className="square"
-    onClick={() => onClickCallback(id)}
   >
     {value}
   </button>

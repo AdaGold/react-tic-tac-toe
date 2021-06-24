@@ -4,21 +4,20 @@ import Square from './Square';
 import PropTypes from 'prop-types';
 
 
-const generateSquares = (squares, onClickCallback) => {
+const generateSquares = (squares) => {
   const singleArraySquares = [].concat(...squares);
   return singleArraySquares.map((square) => {
     return <Square
       value={square.value}
       id={square.id}
-      onClickCallback={onClickCallback}
       key={square.id}
     />
   });
 }
 
-const Board = ({ squares, onClickCallback }) => {
+const Board = ({ squares }) => {
 
-  const squareList = generateSquares(squares, onClickCallback);
+  const squareList = generateSquares(squares);
   return <div className="grid" >
     {squareList}
   </div>
