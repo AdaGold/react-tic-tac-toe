@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Square.css'
 
-const Square = ({ value, id }) => {
+const Square = ({ value, id, currentPlayer }) => {
   const state = useState({ id, value })
 
   const updateSquare = () => {

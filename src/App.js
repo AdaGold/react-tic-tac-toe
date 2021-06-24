@@ -40,7 +40,7 @@ const App = () => {
         <h2>`Current Player ${ currentPlayer }`</h2>
       </header>
       <main>
-        <Board squares={squares} />
+        <Board squares={squares} currentPlayer={currentPlayer} />
       </main>
     </div>
   );

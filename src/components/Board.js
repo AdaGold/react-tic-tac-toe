@@ -4,13 +4,14 @@ import Square from './Square';
 import PropTypes from 'prop-types';
 
 
-const generateSquares = (squares) => {
+const generateSquares = (squares, currentPlayer) => {
   const singleArraySquares = [].concat(...squares);
   return singleArraySquares.map((square) => {
     return <Square
       value={square.value}
       id={square.id}
       key={square.id}
+      currentPlayer={currentPlayer}
     />
   });
 }
