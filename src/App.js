@@ -33,6 +33,33 @@ const App = () => {
   const [squares, setSquares] = useState(generateSquares());
   const [currentPlayer, setCurrentPlayer] = useState(PLAYER_1);
 
+  const updateSquares = (id) => {
+    const newSquares = [...squares]
+    let row = 0;
+    let col = 0;
+    let found = false;
+
+    while (row<3 && found === false){
+      while (col<3 && found === false){
+        let currentSquare = newSquares[row][col];
+        if (currentSquare.id === id){
+          if (currentSquare.value !== ''){
+            return;
+          }
+          currentSquare.value = currentPlayer
+          found = true
+
+          currentPlayer === PLAYER_1 ? setCurrentPlayer(PLAYER_2) : setCurrentPlayer(PLAYER_1)
+        }
+        col+=1
+      }
+      row+=1
+      col = 0
+    }
+    setSquares(newSquares)
+    console.log("I'm in updateSquare", id)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -40,7 +67,9 @@ const App = () => {
         <h2>`Current Player ${ currentPlayer }`</h2>
       </header>
       <main>
-        <Board squares={squares} currentPlayer={currentPlayer} />
+        <Board 
+        squares={squares} 
+        onClickCallback={updateSquares} />
       </main>
     </div>
   );

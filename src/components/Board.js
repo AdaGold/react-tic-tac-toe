@@ -4,21 +4,30 @@ import Square from './Square';
 import PropTypes from 'prop-types';
 
 
-const generateSquares = (squares, currentPlayer) => {
-  const singleArraySquares = [].concat(...squares);
-  return singleArraySquares.map((square) => {
+// const generateSquares = (squares, onClickCallback) => {
+//   const singleArraySquares = [].concat(...squares);
+//   return singleArraySquares.map((square) => {
+//     return <Square
+//       value={square.value}
+//       id={square.id}
+//       key={square.id}
+//       onClickCallback={onClickCallback}
+//     />
+//   });
+// }
+
+const Board = (props) => {
+
+  const singleArraySquares = [].concat(...props.squares);
+  const squareList = singleArraySquares.map((square) => {
     return <Square
       value={square.value}
       id={square.id}
       key={square.id}
-      currentPlayer={currentPlayer}
+      onClickCallback={props.onClickCallback}
     />
   });
-}
-
-const Board = ({ squares }) => {
-
-  const squareList = generateSquares(squares);
+  //const squareList = generateSquares(props.squares, props.onClickCallback);
   return <div className="grid" >
     {squareList}
   </div>
