@@ -1,3 +1,3 @@
 #!/bin/sh
 
-CI=true npm test
+CI=true yarn test
