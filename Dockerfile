@@ -1,8 +1,6 @@
-FROM node:15.3.0-alpine3.10
+FROM node:16-alpine3.11
 
 LABEL maintainer="chris@adadev.org"
-
-RUN apk add --no-cache bash
 
 RUN mkdir /app
 
@@ -15,5 +13,7 @@ ADD $SUBMISSION_SUBFOLDER /app
 # for Testing
 # ADD . .
 
-RUN npm install
+ADD ./test.sh .
+
+RUN yarn install --frozen-lockfile
 RUN chmod +x test.sh
