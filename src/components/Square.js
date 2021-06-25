@@ -3,15 +3,10 @@ import PropTypes from 'prop-types';
 
 import './Square.css'
 
-const Square = ({ value, id, currentPlayer }) => {
-  const state = useState({ id, value })
-
-  const updateSquare = () => {
-
-  }
-
+const Square = ({ value, id, onClickCallback }) => {
   return <button
     className="square"
+    onClick={onClickCallback({id, value})}
   >
     {value}
   </button>

@@ -33,14 +33,57 @@ const App = () => {
   const [squares, setSquares] = useState(generateSquares());
   const [currentPlayer, setCurrentPlayer] = useState(PLAYER_1);
 
+  const updateSquare = (targetSquare) => {
+    return () => {
+      if (targetSquare.value !== "") {
+        return
+      }
+    
+      const newSquares = squares.map(row => 
+        row.map(square => {
+          if (square.id === targetSquare.id) {
+            return { id: square.id, value: currentPlayer }
+          } else {
+            return square
+          }
+        })
+      )
+      
+      setSquares(newSquares)
+    
+      if (currentPlayer === PLAYER_1) {
+        setCurrentPlayer(PLAYER_2)
+      } else {
+        setCurrentPlayer(PLAYER_1)
+      }
+    }
+  }
+
+  // If React used plain function calls instead of JSX:
+
+  // return (
+  //   div(
+  //     {className: "App"},
+  //     header(
+  //       {className: "App-header},
+  //       h1({}, "React Tic Tac Toe"),
+  //       h2({}, `Current Player ${currentPlayer}`)
+  //     ),
+  //     main(
+  //       {},
+  //       Board({squares: squares, onClickCallback: updateSquare})
+  //     )
+  //   )
+  // )
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>React Tic Tac Toe</h1>
-        <h2>`Current Player ${ currentPlayer }`</h2>
+        <h2>Current Player {currentPlayer}</h2>
       </header>
       <main>
-        <Board squares={squares} currentPlayer={currentPlayer} />
+        <Board squares={squares} onClickCallback={updateSquare} />
       </main>
     </div>
   );
