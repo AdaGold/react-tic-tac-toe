@@ -178,7 +178,7 @@ Follow the [testing directions in this project doc](./ada-project-docs/testing-r
 
 ## Wave 2: Add Click Functionality
 
-**Note: ** The "Lifting State Up" lessons should be completed before starting with this wave.
+**Note:** The "Lifting State Up" lessons should be completed before starting with this wave.
 
 When a user clicks on a square, it should set the square's value to `"X"` or `"O"`, depending on the current player's turn. This should update the game's state.
 
