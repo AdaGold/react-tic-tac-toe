@@ -3,17 +3,21 @@ import PropTypes from 'prop-types';
 
 import './Square.css'
 
-const Square = ({ value, id, currentPlayer }) => {
-  const state = useState({ id, value })
+//const Square = ({ value, id, currentPlayer }) => {
+const Square = (props) => {
+  //const state = useState({ id, value })
+  //const [value, setValue] = useState(props.value)
 
-  const updateSquare = () => {
-
+  const handleClick = () => {
+    props.onClickCallback(props.id)
   }
 
   return <button
-    className="square"
+    className="square" 
+    //onClick={handleClick}
+    onClick = {()=>props.onClickCallback(props.id)}
   >
-    {value}
+    {props.value}
   </button>
 }
 
