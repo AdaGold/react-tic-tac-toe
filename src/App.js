@@ -33,14 +33,38 @@ const App = () => {
   const [squares, setSquares] = useState(generateSquares());
   const [currentPlayer, setCurrentPlayer] = useState(PLAYER_1);
 
+  const updateSquare = (id, value) => {
+    return () => {
+      if (value === "") {
+        const newSquares = squares.map(row => {
+          return row.map(square => {
+            if (square.id === id) {
+              return { id: square.id, value: currentPlayer }
+            } else {
+              return square
+            }
+          })
+        })
+
+        setSquares(newSquares)
+        
+        if (currentPlayer === PLAYER_1) {
+          setCurrentPlayer(PLAYER_2)
+        } else {
+          setCurrentPlayer(PLAYER_1)
+        }
+      }
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>React Tic Tac Toe</h1>
-        <h2>`Current Player ${ currentPlayer }`</h2>
+        <h2>{`Current Player ${ currentPlayer }`}</h2>
       </header>
       <main>
-        <Board squares={squares} currentPlayer={currentPlayer} />
+        <Board squares={squares} onClickCallback={updateSquare} />
       </main>
     </div>
   );
