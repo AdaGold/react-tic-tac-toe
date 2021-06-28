@@ -14,7 +14,7 @@ describe('App', () => {
     expect(buttons[buttonIndex].innerHTML).toEqual(expectedResult);
   }
 
-  describe.skip('Wave 2: clicking on squares and rendering App', () => {
+  describe('Wave 2: clicking on squares and rendering App', () => {
 
   test('App renders with a board of 9 empty buttons', () => {
     // Arrange-Act - Render the app
@@ -85,7 +85,7 @@ describe('App', () => {
 });
 
   
-  describe.skip('Wave 3:  Winner tests', () => {
+  describe('Wave 3:  Winner tests', () => {
     describe('Prints "Winner is x" when x wins', () => {
       test('that a winner will be identified when 3 Xs get in a row across the top', () => {
         // Arrange
@@ -364,7 +364,7 @@ describe('App', () => {
     });       
   });
 
-  describe.skip('Wave 4:  reset game button', () => {
+  describe('Wave 4:  reset game button', () => {
     test('App has a "Reset Game" button', () => {
       // Arrange-Act
       render(<App />);
