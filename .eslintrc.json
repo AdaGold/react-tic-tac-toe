@@ -1,36 +1,34 @@
 {
+  "parser": "@babel/eslint-parser",
   "env": {
-      "browser": true,
-      "es2021": true,
-      "es6": true,
-      "jest": true,
-      "node": true
+    "browser": true,
+    "es2021": true,
+    "es6": true,
+    "jest": true,
+    "node": true
   },
   "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:jsx-a11y/recommended",
-      "plugin:react-hooks/recommended",
-      "plugin:jest/recommended",
-      "plugin:testing-library/react"
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jest/recommended",
+    "plugin:testing-library/react"
   ],
   "parserOptions": {
-      "ecmaFeatures": {
-          "jsx": true
-      },
-      "ecmaVersion": "latest",
-      "sourceType": "module"
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
-  "plugins": [
-    "import",
-    "jsx-a11y"
-  ],
+  "plugins": ["import", "jsx-a11y"],
   "root": true,
   "rules": {
     "max-len": [1, 120, 2, { "ignoreComments": true }],
     "no-console": "off",
     "quotes": ["warn", "single"],
-    "camelcase": ["error", {"properties": "always"}],
+    "camelcase": ["error", { "properties": "always" }],
     "semi": ["warn", "always"]
   },
   "settings": {
