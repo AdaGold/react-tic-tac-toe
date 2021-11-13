@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import "./App.css";
+import React, { useState } from 'react';
+import './App.css';
 
-import Board from "./components/Board";
+import Board from './components/Board';
 
-const PLAYER_1 = "x";
-const PLAYER_2 = "o";
+const PLAYER_1 = 'x';
+const PLAYER_2 = 'o';
 
 const generateSquares = () => {
   const squares = [];
@@ -17,7 +17,7 @@ const generateSquares = () => {
     while (col < 3) {
       squares[row].push({
         id: currentId,
-        value: "",
+        value: '',
       });
       col += 1;
       currentId += 1;
@@ -45,13 +45,13 @@ const App = () => {
       if (
         squares[i][0].value === squares[i][1].value &&
         squares[i][2].value === squares[i][1].value &&
-        squares[i][0].value !== ""
+        squares[i][0].value !== ''
       ) {
         return squares[i][0].value;
       } else if (
         squares[0][i].value === squares[1][i].value &&
         squares[2][i].value === squares[1][i].value &&
-        squares[0][i].value !== ""
+        squares[0][i].value !== ''
       ) {
         return squares[0][i].value;
       }
@@ -61,7 +61,7 @@ const App = () => {
     if (
       squares[0][0].value === squares[1][1].value &&
       squares[2][2].value === squares[1][1].value &&
-      squares[1][1].value !== ""
+      squares[1][1].value !== ''
     ) {
       return squares[0][0].value;
     }
@@ -70,7 +70,7 @@ const App = () => {
     if (
       squares[0][2].value === squares[1][1].value &&
       squares[2][0].value === squares[1][1].value &&
-      squares[1][1].value !== ""
+      squares[1][1].value !== ''
     ) {
       return squares[0][2].value;
     }
@@ -89,7 +89,7 @@ const App = () => {
       while (col < 3 && !found) {
         let currentSquare = newSquares[row][col];
         if (currentSquare.id === id) {
-          if (currentSquare.value !== "") return;
+          if (currentSquare.value !== '') return;
 
           found = true;
           currentSquare.value = currentPlayer;
