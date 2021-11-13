@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "extends": ["react-app", "plugin:jest/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["jest"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-var": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "comma-dangle": ["warn", "only-multiline"],
+    "quotes": [
+      "error",
+      "single",
+      { "allowTemplateLiterals": true, "avoidEscape": true }
+    ],
+    "camelcase": "error"
+  }
+}
