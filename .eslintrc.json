@@ -1,41 +1,43 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "es6": true,
-        "jest": true,
-        "node": true
+  "parser": "@babel/eslint-parser",
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jest/recommended",
+    "plugin:testing-library/react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:jsx-a11y/recommended",
-        "plugin:react-hooks/recommended",
-        "plugin:jest/recommended",
-        "plugin:testing-library/react"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-      "import",
-      "jsx-a11y"
-    ],
-    "root": true,
-    "rules": {
-      "max-len": [1, 120, 2, { "ignoreComments": true }],
-      "no-console": "off",
-      "quotes": ["warn", "single"],
-      "camelcase": ["error", {"properties": "always"}],
-      "semi": ["warn", "always"]
-    },
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["import", "jsx-a11y"],
+  "root": true,
+  "rules": {
+    "max-len": [1, 120, 2, { "ignoreComments": true }],
+    "no-console": "off",
+    "quotes": ["warn", "single"],
+    "camelcase": ["error", { "properties": "always" }],
+    "semi": ["warn", "always"],
+    "no-unused-vars": [
+      "warn",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
+  }
 }
