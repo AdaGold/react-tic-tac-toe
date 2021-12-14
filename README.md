@@ -1,5 +1,12 @@
 # React Tic-Tac-Toe
 
+## Please Read First!
+
+The digital campus' version of Tic-Tac-Toe differs from the original in the following ways:
+- We will *not* be using `main` branch. Follow step 6 in the **One-Time Project Setup** to change branches.
+- Wave 1 has been completed for you; however, it would help you understand the flow of data by reviewing the code written for Wave 1.
+- Wave 3's `checkForWinner` function has been created for you; however, read through Wave 3 instructions to figure out how and where to use it.
+
 ## Skills Assessed
 
 - Following directions and reading comprehension
@@ -81,9 +88,15 @@ We can run `yarn install` multiple times safely, but we only need to do this onc
 
 The file `package.json` contains details about our project, the scripts available, and the dependencies needed. We can inspect this file when we are curious about the details of our dependencies.
 
-6. Follow the directions in the "Getting Started" section.
+6. We will not being using `main` branch. Make sure you are working from `digital-starter` by running:
 
-7. Follow the directions in the "Project Requirements" section.
+```bash
+$ git checkout digital-starter
+```
+
+7. Follow the directions in the "Getting Started" section.
+
+8. Follow the directions in the "Project Requirements" section.
 
 ## Project Development Workflow
 
