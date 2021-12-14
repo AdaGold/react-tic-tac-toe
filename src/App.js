@@ -3,8 +3,8 @@ import './App.css';
 
 import Board from './components/Board';
 
-const PLAYER_1 = 'X';
-const PLAYER_2 = 'O';
+const player_1 = 'X';
+const player_2 = 'O';
 
 const generateSquares = () => {
   const squares = [];
