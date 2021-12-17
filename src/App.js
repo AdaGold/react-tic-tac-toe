@@ -115,7 +115,9 @@ const App = () => {
     <div className='App'>
       <header className='App-header'>
         <h1>Tres en linea</h1>
-        <h2>El ganador es ... -- Fill in for wave 3 </h2>
+        <h2>Current Player is {getCurrentPlayer()}</h2>
+        <h2>El ganador es {} </h2>
+
         <button onClick={() => resetGame()}>Reset Game</button>
       </header>
       <main>
