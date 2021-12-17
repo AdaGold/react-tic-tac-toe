@@ -3,8 +3,8 @@ import './App.css';
 
 import Board from './components/Board';
 
-const Player1 = 'X';
-const Player2 = 'O';
+const Player1 = '❌ ';
+const Player2 = '🅾️';
 
 const generateSquares = () => {
   const squares = [];
@@ -103,7 +103,7 @@ const App = () => {
       return Player2;
     }
   };
-    
+
 
   const resetGame = () => {
     setSquares(generateSquares());
@@ -115,10 +115,14 @@ const App = () => {
     <div className='App'>
       <header className='App-header'>
         <h1>Tres en linea</h1>
-        <h2>Current Player is {getCurrentPlayer()}</h2>
-        <h2>El ganador es {} </h2>
+{/* will display current player until winner is determined */}
+        <h2><h2>
+          {winner === null
+            ? `El jugador es ${getCurrentPlayer()}`
+            : `Winner is ${winner} 🥳`}
+        </h2></h2>
 
-        <button onClick={() => resetGame()}>Reset Game</button>
+        <button onClick={() => resetGame()}>Reiniciar el juego</button>
       </header>
       <main>
         {/* pass method through */}
