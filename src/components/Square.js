@@ -8,8 +8,17 @@ const Square = (props) => {
   //  Component to alert a parent 
   //  component when it's clicked on.
 
-  return <button className='square'>{props.value}</button>;
-};
+  // props.onClickCallback(props.id) cannot fill directly?
+  const clickHandler = () => {
+    props.onClickCallback(props.id);
+  };
+  // wave2
+  return (
+    <button className='square'   
+      onClick={clickHandler}>{props.value}
+    </button>
+  );
+  };
 
 Square.propTypes = {
   value: PropTypes.string.isRequired,
