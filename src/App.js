@@ -120,7 +120,7 @@ const App = () => {
 {/* will display current player until winner is determined */}
         <h2><h2>
           {winner === null
-            ? `The current player is ${setCurrentPlayer}`
+            ? `The current player is ${currentPlayer}`
             : `Winner is ${winner}`}
             {/* does not display simultaneously */}
         </h2></h2>
