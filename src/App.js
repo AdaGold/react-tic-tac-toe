@@ -3,8 +3,8 @@ import './App.css';
 
 import Board from './components/Board';
 
-const Player1 = '❌ ';
-const Player2 = '🅾️';
+const Player1 = 'x';
+const Player2 = 'o';
 
 const generateSquares = () => {
   const squares = [];
@@ -29,7 +29,7 @@ const App = () => {
   // This starts state off as a 2D array of JS objects with
   // empty value and unique ids.
   const [squares, setSquares] = useState(generateSquares());
-  const [turn] = useState ({playerTurn: false});
+  const [currentPlayer, setCurrentPlayer] = useState(Player1);
   const [winner, setWinner] = useState(null);
   // Wave 2
   // You will need to create a method to change the square
@@ -78,51 +78,54 @@ const App = () => {
   };
   // create function method to show x, o when player clicks 
   const changeSquare = (id) => {
-    const newSquare = squares.map((square) => {
-      for (let eachSquare of square) {
-        if (eachSquare.id === id && eachSquare.value === '' && !winner) {
-          eachSquare.value = getCurrentPlayer();
-          if (checkForWinner() !== null) {
-            setWinner(checkForWinner());
+    console.log('onclick', id);
+    setSquares((squares) => {
+    let newGame = squares.map((square) => {
+      for (let property of square) {
+        if (property.id === id && property.value === '') {
+         if (currentPlayer === Player1) {
+           property.value = Player1;
+         } else if (currentPlayer  === Player2) {
+            property.value = Player2;
           }
           }
         }
         return square;
       });
-      setSquares(newSquare);
-    
-  };
-  const getCurrentPlayer = () => {
-    turn.playerTurn = !turn.playerTurn;
-    
-    if (turn.playerTurn) {
-      console.log(Player1);
-      return Player1;
+      setWinner(checkForWinner());
+      return newGame;
+    });
+    // set current player
+    if (currentPlayer === Player1) {
+      setCurrentPlayer(Player2);
     } else {
-      console.log(Player2);
-      return Player2;
+      setCurrentPlayer(Player1);
     }
   };
 
-
+// will reset game, player, board
   const resetGame = () => {
     setSquares(generateSquares());
     setWinner(null);
+    setCurrentPlayer(Player1);
   };
+
+  
 
 
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1>Tres en linea</h1>
+        <h1>Tic Tac Toe</h1>
 {/* will display current player until winner is determined */}
         <h2><h2>
           {winner === null
-            ? `El jugador es ${getCurrentPlayer()}`
-            : `Winner is ${winner} 🥳`}
+            ? `The current player is ${setCurrentPlayer}`
+            : `Winner is ${winner}`}
+            {/* does not display simultaneously */}
         </h2></h2>
 
-        <button onClick={() => resetGame()}>Reiniciar el juego</button>
+        <button onClick={resetGame}>Reset Game</button>
       </header>
       <main>
         {/* pass method through */}
