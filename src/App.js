@@ -32,6 +32,12 @@ const App = () => {
   const [winner, setWinner] = useState('');
 
   const updateSquare = (id) => {
+
+    // stop changing state
+    if (winner) {
+      return;
+    }
+
     const sqs = squares.map((rows) =>
       rows.map((singleSquare) => {
         if (singleSquare.id === id) {
@@ -51,6 +57,24 @@ const App = () => {
     setWinner(pickWinner(checkForWinner()));
   };
 
+
+
+
+// const handleSquareClick = (id) => {
+//   const newSquares = [...squares];
+//   for(let row of newSquares) {
+//     for(let col of row) {
+//       if (col.id === id) {
+//         col.value = player;
+//       }
+//     }
+//   }
+//   if (player === player1) {
+//     setPlayer(player2);
+//   } else {setPlayer(player1);}
+//   setSquares(newSquares);
+
+// }
 
 
   const checkForWinner = () => {

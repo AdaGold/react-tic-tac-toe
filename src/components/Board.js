@@ -12,7 +12,7 @@ const Board = ({ squares, onClickCallback, checkWinner }) => {
         <Square
           value={square.value}
           id={square.id}
-          onClickCallback={checkWinner ? null : onClickCallback}
+          onClickCallback={onClickCallback}
           key={square.id}
         />
       );
