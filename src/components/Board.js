@@ -20,7 +20,7 @@ const Board = ({ squares, onClickCallback, checkWinner }) => {
   };
 
   const squareList = generateSquareComponents(squares, onClickCallback);
-  console.log(squareList);
+  
   return <div className="grid">{squareList}</div>;
 };
 
