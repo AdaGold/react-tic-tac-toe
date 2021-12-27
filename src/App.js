@@ -3,6 +3,7 @@ import './App.css';
 
 import Board from './components/Board';
 
+
 const Player1 = 'x';
 const Player2 = 'o';
 
