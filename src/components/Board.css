@@ -13,5 +13,6 @@ div.grid {
 @media screen and (max-width: 540px) {
     .view {
         width: 400px;
+        background-color: burlywood;
     }
   }
