@@ -10,3 +10,9 @@
   align-items: center;
   margin: 2px;
 }
+
+@media screen and (max-width: 540px) {
+  .view {
+      width: 400px;
+  }
+}

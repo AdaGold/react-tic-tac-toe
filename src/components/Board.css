@@ -9,3 +9,9 @@ div.grid {
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
+
+@media screen and (max-width: 540px) {
+    .view {
+        width: 400px;
+    }
+  }
