@@ -90,7 +90,7 @@ The wave 1 tests exist in the files:
 The wave 1 tests verify that:
 
 - The `Square` and `Board` components are rendered and present on the screen
-- The `Square` component displays either an `"x"`, an `"O"`, or an empty string `""`.
+- The `Square` component displays either an `"X"`, an `"O"`, or an empty string `""`.
 
 ## Wave 2
 
@@ -119,5 +119,5 @@ They are skipped by default. Modify the syntax to unskip them.
 
 The wave 3 tests verify that:
 
-- If x wins, the text "Winner is x" appears
-- If o wins, the text "Winner is o" appears
+- If X wins, the text "The winner is X" appears
+- If O wins, the text "The winner is O" appears
