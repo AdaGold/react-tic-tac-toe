@@ -21,7 +21,7 @@ There are tests provided for this optional enhancement!
 Unskip these tests to verify if the reset button resets the grid. The provided tests check for:
 
 - When the reset button (with the text "Reset Game") is clicked, the grid should go back to blank squares. It selects all the `<button class="square"></button>` elements and verifies that they have no text.
-- Immediately after the reset button is clicked, the text "Winner is o" or "Winner is x" should not appear.
+- Immediately after the reset button is clicked, the text "The winner is O" or "The winner is X" should not appear.
 
 ## Deploy on the Web
 
